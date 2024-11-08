@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d0e1f9;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8faadc;
+    padding: 10px 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile .name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.profile .level {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.profile .level i {
+    color: gold;
+    margin-right: 5px;
+}
+.profile .level span {
+    font-size: 16px;
+}
+.profile .progress-bar {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.profile .progress-bar .progress {
+    width: 50%; /* Adjust this value to represent the progress */
+    height: 100%;
+    background-color: #4caf50;
+}
+.icons {
+    display: flex;
+    align-items: center;
+}
+.icons i {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+}
+.icons i:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+.main-content {
+    background-image: url('https://placehold.co/800x400?text=Winter+Season&bg=blue&fg=white');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    position: relative;
+}
+.play-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffeb3b;
+    color: black;
+    padding: 25px 50px; /* Increase the size */
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+}
+.play-button:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+.theme-button {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #ffeb3b;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+}
+.theme-button:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8faadc;
+    padding: 10px 0;
+}
+.footer .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add long box shadow */
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+}
+.footer .item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+.footer .item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}

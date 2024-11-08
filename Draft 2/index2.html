@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Gashboard</title>
+    <link rel="stylesheet" href="design2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <div class="profile">
+            <img src="https://storage.googleapis.com/a1aa/image/deQAgWWTvkRBNKgWAL1IBfklIMd40kgUqLbrfxcFSXvcmAeOB.jpg" alt="Profile Picture" height="50" width="50">
+            <div class="name">player_name</div>
+            <div class="level">
+              <i class="fas fa-star"></i>
+              <span>3</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="fas fa-trophy"></i>
+            <i class="fas fa-crown"></i>
+            <i class="fas fa-bullhorn"></i>
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+        <div class="main-content">
+          </div>
+        <div class="footer">
+          <div class="menu-item">
+            <i class="fas fa-gift"></i>
+            <span>Rewards</span>
+          </div>
+          <div class="menu-item" style="margin-left: 0;">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Events</span>
+          </div>
+          <div class="menu-item">
+            <i class="fas fa-scroll"></i>
+            <span>Quest</span>
+          </div>
+          <button class="play-button">PLAY</button>
+        </div>
+      </div>
+
+      <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d3e0ea;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #8faadc;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            background-color: #d3e0ea;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #8faadc;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile .name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .profile .level {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .profile .level i {
+            color: #f39c12;
+            margin-right: 5px;
+        }
+        .profile .level span {
+            font-size: 14px;
+            color: #333;
+        }
+        .profile .progress {
+            width: 100px;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .profile .progress .progress-bar {
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, #3498db, #2ecc71); /* Added gradient */
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+        .icons i {
+            font-size: 36px; /* Further increased font size */
+            color: #f39c12;
+            margin-left: 20px;
+            transition: transform 0.3s, color 0.3s;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow length */
+            padding: 10px; /* Added padding for better shadow effect */
+            border-radius: 50%; /* Added border-radius for rounded shadow */
+        }
+        .icons i:hover {
+            transform: scale(1.1);
+            color: #f1c40f;
+        }
+        .main-content {
+            background-image: url('https://placehold.co/800x400');
+            background-size: cover;
+            background-position: center;
+            flex-grow: 1;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow length */
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #5A5A5A 0%, #FFFEFE 100%); /* Added linear gradient */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow length */
+        }
+        .footer .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            transition: transform 0.3s, color 0.3s;
+            margin-right: 2px; /* Reduced margin */
+            margin-left: 2px; /* Reduced margin */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow length */
+            padding: 10px; /* Added padding for better shadow effect */
+            border-radius: 10px; /* Added border-radius for rounded shadow */
+        }
+        .footer .menu-item i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .footer .menu-item span {
+            font-size: 14px;
+        }
+        .footer .menu-item:hover {
+            transform: scale(1.1);
+            color: #f1c40f;
+        }
+        .play-button {
+            background-color: #f1c40f;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+        }
+        .play-button:hover {
+            background-color: #e1b700; /* Darker shade for hover effect */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+        @media (max-width: 768px) {
+            .header, .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .icons {
+                margin-top: 10px;
+            }
+            .footer {
+                align-items: center;
+            }
+            .footer .menu-item {
+                margin-bottom: 10px;
+            }
+            .play-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+      </style>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Read n Rise</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/READ N RISE.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <img src="img/READ N RISE.png" alt="Logo" class="logo">
+        <h1>Enter your name</h1>
+        <input type="text" id="nameInput" placeholder="Your name">
+        <br>
+        <button onclick="enterGame()">Enter</button>
+    </div>
+
+
+</body>
+<script>
+    function showEnterNamePage() {
+        document.querySelector('.logo-container').style.display = 'none';
+        document.querySelector('.container').style.display = 'block';
+    }
+
+    function enterGame() {
+        var name = document.getElementById("nameInput").value;
+        if (name) {
+            alert("Welcome, " + name + "!");
+            // Redirect to the main game page
+            window.location.href = "main_game.html"; // Replace with the actual URL of the main game page
+        } else {
+            alert("Please enter your name.");
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener('click', showEnterNamePage, { once: true });
+    });
+</script>
+</html>
